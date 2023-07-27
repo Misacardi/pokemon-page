@@ -24,6 +24,7 @@ export default function PokeList(props) {
   const { getPokeList,getAllType, loading, error } = PokeService();
 
   useEffect(() => {
+    setPok(null)
     getPokemon();
     getAllType()
       .then(setTypes)
@@ -34,6 +35,7 @@ export default function PokeList(props) {
 
 
   const getPokemon = () => {
+    
     getPokeList(limit, selecType).then(setPok);
     setLimit((limit) => limit + 9);
   };
@@ -74,7 +76,7 @@ export default function PokeList(props) {
                 
                 {pok ? viewPokemon : null}
                 {error ? <Error/>: null}
-                {loading ? <Spinner/> :  <button onClick={getPokemon}>Load More</button>}
+                {loading | !pok?  <Spinner/> :  <button onClick={getPokemon}>Load More</button>}
       
         
           </ul>

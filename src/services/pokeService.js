@@ -3,21 +3,21 @@ import { useHttp } from "../hooks/http-hook";
 const PokeService = () => {
   const _apiBase = "https://pokeapi.co/api/v2";
   let _baseLimit = 3;
-  const {loading, clearError, error, request} = useHttp()
+  const { loading, clearError, error, request } = useHttp();
 
   const getPokeList = async (limit = _baseLimit, filter) => {
-    if (filter === 'all') {
+    if (filter === "all") {
       const res = await request(`${_apiBase}/pokemon?limit=${limit}`);
-      const promises = res.results.map(e => getPokeListItem(e.name));
+      const promises = res.results.map((e) => getPokeListItem(e.name));
       return Promise.all(promises);
     } else {
       const res = await request(`${_apiBase}/type/${filter}`);
       const totalCount = res.pokemon.length;
-    
+
       const promises = res.pokemon
-        .slice(0, Math.min(limit, totalCount)) 
-        .map(e => getPokeListItem(e.pokemon.name));
-      
+        .slice(0, Math.min(limit, totalCount))
+        .map((e) => getPokeListItem(e.pokemon.name));
+
       return Promise.all(promises);
     }
   };
@@ -37,13 +37,6 @@ const PokeService = () => {
     return res.results;
   };
 
-  // const getPokForType = async () => {
-  //   const res = await ;
-  //   return res;
-  // };
-
-  
-
   const _transformPokemon = (res) => {
     const officialArtwork = res.sprites.other["official-artwork"];
     const arr = [
@@ -57,11 +50,19 @@ const PokeService = () => {
       id: res.id,
       img: officialArtwork.front_default,
       types: res.types.map((e) => e.type.name),
-      stats: arr
+      stats: arr,
     };
   };
 
-  return { getPokeList, getPokeListItem, getPokeStats,getAllType, loading, clearError, error, };
+  return {
+    getPokeList,
+    getPokeListItem,
+    getPokeStats,
+    getAllType,
+    loading,
+    clearError,
+    error,
+  };
 };
 
 export default PokeService;

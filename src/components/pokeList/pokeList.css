@@ -63,7 +63,7 @@ li *:first-letter {
 }
 
 .pokeList button {
-
+    margin-bottom: 100px;
     transition: 0.5s;
     width: 95%;
     height: 60px;
