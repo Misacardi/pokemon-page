@@ -1,0 +1,156 @@
+li {
+    list-style: none;
+}
+
+
+li *:first-letter {
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.pokeList {
+    padding-bottom: 100px;
+    max-width: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+   
+}
+.pokeList__item  {
+ 
+    cursor: pointer;
+    height: 300px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pokeList__item img {
+    width: 195px;
+}
+
+.pokeList__item span {
+    font-weight: 700;
+}
+
+.types {
+    display: flex;
+    column-gap: 15px;
+    margin-top: 10px;
+    
+}
+.type {
+    border-radius: 5px;
+    min-width: 70px;
+    text-align: center;
+    padding: 5px;
+    font-weight: 600;
+    
+}
+
+.pokeList button {
+
+    transition: 0.5s;
+    width: 100%;
+    height: 60px;
+    background-color: #1e83f7;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.pokeList button:hover {
+    background-color: #0d519e;
+}
+
+
+
+.fire {
+    background-color: #ff0000;
+}
+
+.grass {
+     background-color: #2fb46b;
+}
+
+.poison {
+    background-color: #e69fec;
+}
+
+.electric {
+    background-color: #e4d727;
+}
+.ground {
+background-color: #195735;
+
+}
+
+
+.water {
+    background-color: #0077ff;
+}
+
+.normal {
+    background-color: #a7c9b9;
+}
+
+
+
+.flying {
+ background-color: #91c2fa;
+}
+
+
+.bug {
+    background-color: #4dff4d;
+}
+
+
+.fighting {
+    background-color: #d67575;
+}
+
+
+.ghost{
+    background: #e8ffe1;
+}
+
+
+.steel {
+    background: #3dc2a5;
+}
+
+
+.psychic {
+    background: #535a14;
+}
+
+.ice {
+    background: #1399c2;
+}
+
+.dark {
+    background: #50357c;
+}
+
+.fairy {
+    background: #b60ab6;
+}
+
+
+.shadow {
+    background: #363036;
+}
+
+.rock {
+    background: #9c9181;
+}
+
+.dragon {
+    background: #771a1a;
+}
