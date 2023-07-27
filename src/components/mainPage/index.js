@@ -17,7 +17,7 @@ export default function MainMenu() {
   return (
 <div className='main-menu'>
         <PokeList setId={getId}/>
-        <PokeInfo getId={pokeId}/>
+        <PokeInfo getId={pokeId} setId={getId}/>
 </div>
    
   )

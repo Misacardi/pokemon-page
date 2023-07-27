@@ -43,7 +43,7 @@ export default function PokeList(props) {
     pok &&
     pok.map((e) => {
       const setTypes = e.types.map((t, i) => {
-        return <div key={i} className={"type " + t}>{t}</div>;
+        return <span key={i} className={"type " + t}>{t}</span>;
       });
 
       return (
@@ -55,8 +55,8 @@ export default function PokeList(props) {
       );
     });
   return (
-
-    <div className="container">
+    <div className="pokeList">
+<div className="container">
         <select value={selecType} onChange={e => {setSelecType(e.target.value); setLimit(12)}}>
           <option value="all">All Pokemons</option>
             {types && types.map(e => {
@@ -65,20 +65,26 @@ export default function PokeList(props) {
               )
             })}
         </select>
-        <ul className="pokeList">
-            
+
+
+
+          <ul className="pokeList__inner">
+                    
+                        
                 
+                {pok ? viewPokemon : null}
+                {error ? <Error/>: null}
+                {loading ? <Spinner/> :  <button onClick={getPokemon}>Load More</button>}
+      
         
-        {pok ? viewPokemon : null}
-        {error ? <Error/>: null}
-        {loading ? <Spinner/> :  <button onClick={getPokemon}>Load More</button>}
-     
-       
-        </ul>
+          </ul>
       
        
         
 
     </div>
+
+    </div>
+    
   );
 }

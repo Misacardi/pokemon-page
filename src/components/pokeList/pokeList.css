@@ -7,18 +7,28 @@ li *:first-letter {
     text-transform: uppercase;
 }
 
+
+@media (max-width:1000px) {
+    .container {
+        width: 700px;
+        margin: 0 auto;
+    }
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
-.pokeList {
-    padding-bottom: 100px;
-    max-width: 650px;
+.pokeList__inner {
+    
+    max-width: 660px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
    
 }
+
+
+
 .pokeList__item  {
  
     cursor: pointer;
@@ -48,13 +58,14 @@ li *:first-letter {
     text-align: center;
     padding: 5px;
     font-weight: 600;
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.6);
     
 }
 
 .pokeList button {
 
     transition: 0.5s;
-    width: 100%;
+    width: 95%;
     height: 60px;
     background-color: #1e83f7;
     border: none;

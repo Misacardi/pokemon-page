@@ -1,12 +1,16 @@
 
 
 .info {
-
+    display: none;
     position: fixed;
     right: 500px;
     bottom: 25px;
     width: 350px;
     height: 750px;
+}
+
+.open {
+    display: block;
 }
 
 .info__inner {
@@ -21,10 +25,69 @@
         
 }
 
+.pokeList select {
+    height: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    width: 300px
+}
+
 .info__title {
     text-align: center;
     font-size: 35px;
     font-weight: 700;
+}
+
+.x {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    font-size: 80px;
+    line-height: 0.6;
+}
+
+
+@media (max-width:1760px) {
+    .info {
+
+       
+        right: 200px;
+      
+      
+    }
+}
+
+
+@media (max-width:1200px) {
+    .info {
+
+        
+        right: 0;
+        
+    }
+}
+
+@media (max-width:1000px) {
+    .info {
+
+            display: none;
+            position: static;
+        
+    }
+
+    .open {
+        background-color: bisque;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        display: block;
+    }
+}
+.stat__title::first-letter {
+    text-transform: uppercase;
 }
 .stat__title {
     width: 300px;
