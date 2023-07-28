@@ -12,10 +12,8 @@ const PokeService = () => {
       return Promise.all(promises);
     } else {
       const res = await request(`${_apiBase}/type/${filter}`);
-      const totalCount = res.pokemon.length;
-
       const promises = res.pokemon
-        .slice(0, Math.min(limit, totalCount))
+        .slice(0, Math.min(limit, res.pokemon.length))
         .map((e) => getPokeItem(e.pokemon.name));
 
       return Promise.all(promises);

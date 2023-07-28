@@ -9,6 +9,8 @@ import Error from "../../utils/error";
 
 
 export default function PokeList(props) {
+
+
   const [pok, setPok] = useState([]);
   const [limit, setLimit] = useState(12);
   const [types, setTypes] = useState([]);
@@ -41,9 +43,9 @@ export default function PokeList(props) {
   };
 
 
-  const viewPokemon =
-    pok &&
-    pok.map((e) => {
+  const ViewPokemon = () => {
+    return pok &&
+   pok.map((e) => {
       const setTypes = e.types.map((t, i) => {
         return <span key={i} className={"type " + t}>{t}</span>;
       });
@@ -56,6 +58,8 @@ export default function PokeList(props) {
         </li>
       );
     });
+  }
+    
   return (
     <div className="pokeList">
 <div className="container">
@@ -74,7 +78,7 @@ export default function PokeList(props) {
                     
                         
                 
-                {pok ? viewPokemon : null}
+                {pok ? <ViewPokemon/> : null}
                 {error ? <Error/>: null}
                 {loading | !pok?  <Spinner/> :  <button onClick={getPokemon}>Load More</button>}
             

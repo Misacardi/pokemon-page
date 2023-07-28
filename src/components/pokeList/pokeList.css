@@ -1,170 +1,148 @@
 li {
-    list-style: none;
+  list-style: none;
 }
-
 
 li *:first-letter {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
-
-@media (max-width:1000px) {
-    .container {
-        width: 700px;
-        margin: 0 auto;
-    }
+@media (max-width: 1000px) {
+  .container {
+    width: 700px;
+    margin: 0 auto;
+  }
 }
-
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .pokeList__inner {
-    
-    max-width: 660px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-   
+  max-width: 660px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-
-
-.pokeList__item  {
- 
-    cursor: pointer;
-    height: 300px;
-    border: 1px solid #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.pokeList__item {
+  cursor: pointer;
+  height: 300px;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .pokeList__item img {
-    height: 195px;
-    width: 195px;
+  height: 195px;
+  width: 195px;
 }
 
 .pokeList__item span {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .types {
-    display: flex;
-    column-gap: 15px;
-    margin-top: 10px;
-    
+  display: flex;
+  column-gap: 15px;
+  margin-top: 10px;
 }
 .type {
-    border-radius: 5px;
-    min-width: 70px;
-    text-align: center;
-    padding: 5px;
-    font-weight: 600;
-    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.6);
-    
+  border-radius: 5px;
+  min-width: 70px;
+  text-align: center;
+  padding: 5px;
+  font-weight: 600;
+  box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.6);
 }
 
 .pokeList button {
-    margin-bottom: 100px;
-    transition: 0.5s;
-    width: 95%;
-    height: 60px;
-    background-color: #1e83f7;
-    border: none;
-    border-radius: 10px;
-    color: #ffffff;
-    font-size: 30px;
-    cursor: pointer;
+  margin-bottom: 100px;
+  transition: 0.5s;
+  width: 95%;
+  height: 60px;
+  background-color: #1e83f7;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .pokeList button:hover {
-    background-color: #0d519e;
+  background-color: #0d519e;
 }
 
-
-
 .fire {
-    background-color: #ff0000;
+    background: linear-gradient(0deg, #ff0000, transparent);
 }
 
 .grass {
-     background-color: #2fb46b;
+  background: linear-gradient(0deg, #2fb46b, transparent);
 }
 
 .poison {
-    background-color: #e69fec;
+  background: linear-gradient(0deg, #e69fec, transparent);
 }
 
 .electric {
-    background-color: #e4d727;
+  background: linear-gradient(0deg, #e4d727, transparent);
 }
 .ground {
-background-color: #195735;
-
+  background: linear-gradient(0deg, #195735, transparent);
 }
 
-
 .water {
-    background-color: #0077ff;
+  background: linear-gradient(0deg, #0077ff, transparent);
 }
 
 .normal {
-    background-color: #a7c9b9;
+  background: linear-gradient(0deg, #a7c9b9, transparent);
 }
-
-
 
 .flying {
- background-color: #91c2fa;
+  background: linear-gradient(0deg, #91c2fa, transparent);
 }
-
 
 .bug {
-    background-color: #4dff4d;
+  background: linear-gradient(0deg, #4dff4d, transparent);
 }
-
 
 .fighting {
-    background-color: #d67575;
+  background: linear-gradient(0deg, #d67575, transparent);
 }
 
-
-.ghost{
-    background: #e8ffe1;
+.ghost {
+  background: linear-gradient(0deg, #e8ffe1, transparent);
 }
-
 
 .steel {
-    background: #3dc2a5;
+  background: linear-gradient(0deg, #3dc2a5, transparent);
 }
 
-
 .psychic {
-    background: #535a14;
+  background: linear-gradient(0deg, #535a14, transparent);
 }
 
 .ice {
-    background: #1399c2;
+  background: linear-gradient(0deg, #1399c2, transparent);
 }
 
 .dark {
-    background: #50357c;
+  background: linear-gradient(0deg, #50357c, transparent);
 }
 
 .fairy {
-    background: #b60ab6;
+  background: linear-gradient(0deg, #b60ab6, transparent);
 }
 
-
 .shadow {
-    background: #363036;
+  background: linear-gradient(0deg, #363036, transparent);
 }
 
 .rock {
-    background: #9c9181;
+  background: linear-gradient(0deg, #9c9181, transparent);
 }
 
 .dragon {
-    background: #771a1a;
+  background: linear-gradient(0deg, #771a1a, transparent);
 }
