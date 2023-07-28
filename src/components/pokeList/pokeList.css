@@ -14,6 +14,8 @@ li *:first-letter {
         margin: 0 auto;
     }
 }
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -39,6 +41,7 @@ li *:first-letter {
     align-items: center;
 }
 .pokeList__item img {
+    height: 195px;
     width: 195px;
 }
 

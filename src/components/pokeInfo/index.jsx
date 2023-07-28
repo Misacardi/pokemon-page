@@ -21,11 +21,11 @@ export default function PokeInfo({ getId, setId }) {
   const open = getId ? 'info open': 'info'
 
   const View = () => {
-    const { img, name, stats } = inf;
+    const {name, stats} = inf;
 
     return (
       <div className="info__inner">
-        <img src={img} alt="" className="info__img" />
+        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${getId}.svg`} alt="" className="info__img" />
         <div className="info__title">{name} #{getId}</div>
         <ul className="info__stats">
           <div className="x" onClick={e => setId(null)} >X</div>

@@ -10,9 +10,9 @@ import Error from "../../utils/error";
 
 export default function PokeList(props) {
   const [pok, setPok] = useState([]);
-  let [limit, setLimit] = useState(12);
+  const [limit, setLimit] = useState(12);
   const [types, setTypes] = useState([]);
-  const [selecType, setSelecType] = useState('all')
+  const [selecType, setSelecType] = useState()
 
 
 
@@ -50,7 +50,7 @@ export default function PokeList(props) {
 
       return (
         <li onClick={() => {props.setId(e.id)}} key={e.id} className="pokeList__item">
-          <img src={e.img} alt="" />
+          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${e.id}.svg`} alt="" />
           <span>{e.name}</span>
           <div className="types">{setTypes}</div>
         </li>
@@ -77,7 +77,7 @@ export default function PokeList(props) {
                 {pok ? viewPokemon : null}
                 {error ? <Error/>: null}
                 {loading | !pok?  <Spinner/> :  <button onClick={getPokemon}>Load More</button>}
-      
+            
         
           </ul>
       
